@@ -19,9 +19,10 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     // 1.动态创建自己的按钮
     UIButton *button = [[UIButton alloc]init];
+    
     // 2.给按钮设置文字
     [button setTitle:@"你好啊" forState:UIControlStateNormal];//(默认状态)
     [button setTitle:@"点我干嘛" forState:UIControlStateHighlighted]; // 高亮状态
@@ -32,6 +33,11 @@
     [button setBackgroundImage:imgNormal forState:UIControlStateNormal];//默认状态
     [button setBackgroundImage:imgHighLighted forState:UIControlStateHighlighted];//高亮状态
     
+    // 4.设置按钮的frame
+    button.frame = CGRectMake(50, 100, 100, 100);
+    
+    // 4.将button加到该view中
+    [self.view addSubview:button];
     
 }
 
